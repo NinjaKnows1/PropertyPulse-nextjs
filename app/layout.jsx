@@ -1,18 +1,20 @@
-import "@/assets/styles/globals.css";
+import Navbar from "@/components/Navbar";
+import "../assets/styles/globals.css";
 
 export const metadata = {
   title: "property-pulse",
   keyword: "rental, property, real estate",
-  description: "Find the perfect rental property"
+  description: "Find the perfect rental property",
 };
+
 const MainLayout = ({ children }) => {
   return (
-    <html>
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <main>{children}</main>
+        <Navbar />
+        <div>{children}</div>
       </body>
     </html>
   );
 };
-
 export default MainLayout;
